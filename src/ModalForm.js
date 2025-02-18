@@ -34,7 +34,7 @@ const ModalForm = ({ onClose }) => {
       }
   
 
-      if (formData.dob && new Date(formData.date) > new Date()) {
+      if (formData.dob && new Date(formData.dob) > new Date()) {
         alert("Invalid date of birth. Date of birth cannot be in the future.");
         isValid = false;
       }
@@ -113,11 +113,11 @@ const ModalForm = ({ onClose }) => {
               onChange={handleChange}
               id="dob"
               style={{ textAlign: "center" }}
-              value={formData.date}
+              value={formData.dob}
               type="date"
               required
             />
-            {error.date && <p>{error.date}</p> }
+            {error.dob && <p>{error.dob}</p> }
           </div>
           <button className="button submit-button" type="submit">
             Submit
