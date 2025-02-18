@@ -53,7 +53,8 @@ const ModalForm = ({ onClose }) => {
 
 
   return (
-    <div className="modal-overlay modal">
+    <div className="modal-overlay modal"
+    onClick={onClose}>
       <div className="modal-container modal-content">
         <h2>Fill Details</h2>
         <form onSubmit={handleSubmit} style={{ fontWeight: "bold" }}>
