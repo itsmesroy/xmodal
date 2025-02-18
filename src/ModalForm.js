@@ -57,9 +57,9 @@ const ModalForm = ({ onClose }) => {
     };
 
   return (
-    <div className="modal-overlay modal" onClick={handleClick}
+    <div className="modal-overlay modal" onClick={onClose}
     >
-      <div className="modal-container modal-content" >
+      <div className="modal-container modal-content" onClick={(e) => e.stopPropagation()} >
         <h2>Fill Details</h2>
         <form onSubmit={handleSubmit} style={{ fontWeight: "bold" }}>
           <div
