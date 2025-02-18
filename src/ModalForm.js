@@ -5,7 +5,7 @@ const ModalForm = ({ onClose }) => {
     username: "",
     email: "",
     phone: "",
-    date: "",
+    dob: "",
   });
   const [error, setError] = useState({
     username: "",
@@ -20,7 +20,7 @@ const ModalForm = ({ onClose }) => {
     });
   };
   const validationForm=()=>{
-    const errors= {username:'', email:'', phone:'', date:''};
+    const errors= {username:'', email:'', phone:'', dob:''};
     let isValid=true;
 
       if (formData.email && !formData.email.includes("@")) {
@@ -34,7 +34,7 @@ const ModalForm = ({ onClose }) => {
       }
   
 
-      if (formData.date && new Date(formData.date) > new Date()) {
+      if (formData.dob && new Date(formData.date) > new Date()) {
         alert("Invalid date of birth. Date of birth cannot be in the future.");
         isValid = false;
       }
@@ -50,12 +50,16 @@ const ModalForm = ({ onClose }) => {
         onClose();
     }
   }
-
+  const handleClick = (e) => {
+    if (e.target.classList.contains("modal-overlay")) {
+      onClose();
+    }
+    };
 
   return (
-    <div className="modal-overlay modal"
-    onClick={onClose}>
-      <div className="modal-container modal-content">
+    <div className="modal-overlay modal" onClick={handleClick}
+    >
+      <div className="modal-container modal-content" >
         <h2>Fill Details</h2>
         <form onSubmit={handleSubmit} style={{ fontWeight: "bold" }}>
           <div
