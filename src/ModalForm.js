@@ -104,7 +104,7 @@ const ModalForm = ({ onClose }) => {
             <label style={{ margin: "10px" }}>Date of Birth:</label>
             <input
               onChange={handleChange}
-              id="date"
+              id="dob"
               style={{ textAlign: "center" }}
               value={formData.date}
               type="date"
