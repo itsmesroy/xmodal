@@ -50,15 +50,16 @@ const ModalForm = ({ onClose }) => {
         onClose();
     }
   }
-  const handleClick = (e) => {
-    if (e.target.classList.contains("modal-overlay")) {
-      onClose();
-    }
+
+    const handleOutsideClick = (e) => {
+      if (e.target.classList.contains("modal-overlay")) {
+        onClose(); 
+      }
     };
 
   return (
-    <div onClick={onClose}>
-    <div className="modal-overlay modal" 
+    <div >
+    <div className="modal-overlay modal" onClick={handleOutsideClick}
     >
       <div className="modal-container modal-content" onClick={(e) => e.stopPropagation()} >
         <h2>Fill Details</h2>
