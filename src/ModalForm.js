@@ -57,7 +57,8 @@ const ModalForm = ({ onClose }) => {
     };
 
   return (
-    <div className="modal-overlay modal" onClick={onClose}
+    <div onClick={onClose}>
+    <div className="modal-overlay modal" 
     >
       <div className="modal-container modal-content" onClick={(e) => e.stopPropagation()} >
         <h2>Fill Details</h2>
@@ -122,6 +123,7 @@ const ModalForm = ({ onClose }) => {
           </button>
         </form>
       </div>
+    </div>
     </div>
   );
 };
