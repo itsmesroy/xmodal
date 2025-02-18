@@ -53,8 +53,8 @@ const ModalForm = ({ onClose }) => {
 
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-container">
+    <div className="modal-overlay modal">
+      <div className="modal-container modal-content">
         <h2>Fill Details</h2>
         <form onSubmit={handleSubmit} style={{ fontWeight: "bold" }}>
           <div
@@ -112,7 +112,7 @@ const ModalForm = ({ onClose }) => {
             />
             {error.date && <p>{error.date}</p> }
           </div>
-          <button className="button" type="submit">
+          <button className="button submit-button" type="submit">
             Submit
           </button>
         </form>
