@@ -59,7 +59,7 @@ const ModalForm = ({ onClose }) => {
 
     const handleOutsideClick = (e) => {
       if (e.target.classList.contains("modal")) {
-        document.querySelector(".modal").remove();
+       
         onClose(); 
         console.log("you clicked")
       }

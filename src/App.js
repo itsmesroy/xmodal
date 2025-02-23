@@ -9,12 +9,12 @@ function App() {
   const closeModal=() => setIsOpen(false);
 
   return (
-    <div className="App" >
-      <div style={{textAlign:"center", margin:"5px"}}>
+    <div className="App" style={{textAlign:"center", margin:"5px"}}>
+      
       <h1>User Details Modal</h1>
       <button className='button' onClick={openModal} >Open Form</button>
       {isOpen && <ModalForm onClose={closeModal} />}
-    </div>
+    
     </div>
   );
 }
