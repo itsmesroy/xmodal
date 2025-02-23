@@ -47,16 +47,24 @@ const ModalForm = ({ onClose }) => {
     e.preventDefault();
     if(validationForm()){
         alert('Form submitted successfully');
+        setFormData({
+          username: "", 
+          email: "",
+          phone: "",
+          dob: "",
+        }   )
         onClose();
     }
   }
 
     const handleOutsideClick = (e) => {
       if (e.target.classList.contains("modal-overlay")) {
+
+  document.querySelector(".modal-overlay").remove();
         onClose(); 
       }
     };
-
+   
   return (
     <div >
     <div className="modal-overlay modal" onClick={handleOutsideClick}
