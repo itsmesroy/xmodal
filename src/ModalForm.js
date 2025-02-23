@@ -69,7 +69,7 @@ const ModalForm = ({ onClose }) => {
     <div >
     <div className="modal" onClick={handleOutsideClick}
     >
-      <div className="modal-container modal-content" onClick={(e) => e.stopPropagation()} >
+      <div className="modal-content" onClick={(e) => e.stopPropagation()} >
         <h2>Fill Details</h2>
         <form onSubmit={handleSubmit} style={{ fontWeight: "bold" }}>
           <div
