@@ -58,16 +58,16 @@ const ModalForm = ({ onClose }) => {
   }
 
     const handleOutsideClick = (e) => {
-      if (e.target.classList.contains("modal-overlay")) {
-
-  document.querySelector(".modal-overlay").remove();
+      if (e.target.classList.contains("modal")) {
+        document.querySelector(".modal").remove();
         onClose(); 
+        console.log("you clicked")
       }
     };
    
   return (
     <div >
-    <div className="modal-overlay modal" onClick={handleOutsideClick}
+    <div className="modal" onClick={handleOutsideClick}
     >
       <div className="modal-container modal-content" onClick={(e) => e.stopPropagation()} >
         <h2>Fill Details</h2>
