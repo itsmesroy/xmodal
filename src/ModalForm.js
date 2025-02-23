@@ -66,8 +66,8 @@ const ModalForm = ({ onClose }) => {
     };
    
   return (
-    <div >
-    <div className="modal" onClick={handleOutsideClick}
+    <div onClick={handleOutsideClick}>
+    <div className="modal" 
     >
       <div className="modal-content" onClick={(e) => e.stopPropagation()} >
         <h2>Fill Details</h2>
